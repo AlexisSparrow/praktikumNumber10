@@ -21,11 +21,12 @@ module.exports = {
         },
         {
             test: /\.css$/,
-            use:  [MiniCssExtractPlugin.loader, 'css-loader']
+            use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
         },
         {
-            test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+            test: /\.(woff|woff2)$/i,
             use: [
+                'file-loader?name=../dist/fonts/[name].[ext]',
                 {
                     loader: 'file-loader',
                 },
@@ -34,7 +35,7 @@ module.exports = {
         {
             test: /\.(png|jpe?g|gif|ico|svg)$/i,
             use: [
-                'file-loader?name=../images/[name].[ext]',
+                'file-loader?name=../dist/images/[name].[ext]',
                 {
                     loader: 'image-webpack-loader',
                     options: {
@@ -48,7 +49,7 @@ module.exports = {
   },
   plugins: [ 
     new MiniCssExtractPlugin({
-        filename: './src/pages/index.[contenthash].css'
+        filename: 'index.[contenthash].css'
     }),
     new HtmlWebpackPlugin({
       inject: false,
