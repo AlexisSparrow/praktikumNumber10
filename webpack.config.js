@@ -40,7 +40,7 @@ module.exports = {
         {
             test: /\.css$/,
             use:[
-                    (isDev? 'style-loader': MiniCssExtractPlugin.loader),
+                    MiniCssExtractPlugin.loader,
                     'css-loader', 
                     'postcss-loader'
             ]
@@ -48,15 +48,6 @@ module.exports = {
         {
             test: /\.(eot|ttf|woff|woff2)$/,
             loader: 'file-loader?name=./vendor/[name].[ext]'
-        },
-        {
-            test: /\.(png|jpe?g|gif)$/i,
-            use: [
-                'file-loader?name=../dist/images/[name].[ext]',
-                {
-                    loader: 'file-loader',
-                },
-            ],
         },
         {
             test: /\.(png|jpg|gif|ico|svg)$/i,

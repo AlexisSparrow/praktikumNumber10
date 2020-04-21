@@ -1,4 +1,4 @@
-import "../pages/index.css"
+import "../index.css"
 const root = document.querySelector('.root')
 const userName = document.querySelector('.user-info__name');
 const userJob = document.querySelector('.user-info__job');
