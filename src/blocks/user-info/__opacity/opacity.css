@@ -1,0 +1,11 @@
+.user-info__opacity {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+    transition: background 1s;
+}
+
+.user-info__opacity:hover {
+    background: rgba(0,0,0,0.5);
+}

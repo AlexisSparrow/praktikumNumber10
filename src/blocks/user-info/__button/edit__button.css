@@ -1,0 +1,14 @@
+.edit__button {
+    width: fit-content;
+    height:fit-content;
+    font-size: 15px;
+    margin-top:24px;
+}
+
+@media screen and (max-width: 980px) {
+    .edit__button {
+        margin:auto;
+        margin-top:14px;
+    }
+  }
+  
