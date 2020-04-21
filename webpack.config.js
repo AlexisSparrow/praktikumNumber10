@@ -12,17 +12,38 @@ module.exports = {
 // указали путь к файлу, в квадратных скобках куда вставлять сгенерированный хеш
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+            loader: "babel-loader"
+            },
         },
-      },
-      {
-        test: /\.css$/,
-        use:  [MiniCssExtractPlugin.loader, 'css-loader']
-       }
+        {
+            test: /\.css$/,
+            use:  [MiniCssExtractPlugin.loader, 'css-loader']
+        },
+        {
+            test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+            use: [
+                {
+                    loader: 'file-loader',
+                },
+            ],
+        },
+        {
+            test: /\.(png|jpe?g|gif|ico|svg)$/i,
+            use: [
+                'file-loader?name=../images/[name].[ext]',
+                {
+                    loader: 'image-webpack-loader',
+                    options: {
+                        bypassOnDebug: true, 
+                        disable: true, 
+                    },
+                },
+            ],
+        }        
     ]
   },
   plugins: [ 
