@@ -1,3 +1,4 @@
+var FormValidator = require('./FormValidator').default;
 class FormValidatorAvatar extends FormValidator {
     constructor(form, linkForm) {
         super(form);
@@ -17,3 +18,5 @@ class FormValidatorAvatar extends FormValidator {
         };
     }
 }
+
+export default FormValidatorAvatar

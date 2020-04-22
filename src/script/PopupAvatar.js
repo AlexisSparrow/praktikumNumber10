@@ -1,3 +1,4 @@
+var Popup = require('./Popup').default
 class PopupAvatar extends Popup {
     constructor(element) {
         super(element)
@@ -23,3 +24,5 @@ class PopupAvatar extends Popup {
         popupAvatar.close();
     }
 }
+
+export default PopupAvatar

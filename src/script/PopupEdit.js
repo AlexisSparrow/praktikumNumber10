@@ -1,3 +1,5 @@
+var Popup = require('./Popup').default;
+var userInfo = require('./script');
 class PopupEdit extends Popup {
     constructor(element) {
         super(element);
@@ -12,3 +14,5 @@ class PopupEdit extends Popup {
             .addEventListener('submit', userInfo.updateUserInfo )
     }
 }
+
+export default PopupEdit

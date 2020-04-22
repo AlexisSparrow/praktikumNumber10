@@ -1,3 +1,4 @@
+var Popup = require('./Popup').default
 class PopupAdd extends Popup {
     constructor(element,nameForm,linkForm) {
         super(element);
@@ -29,3 +30,5 @@ class PopupAdd extends Popup {
         formAdd.reset();
     };
 }
+
+export default PopupAdd

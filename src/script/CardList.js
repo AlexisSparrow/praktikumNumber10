@@ -1,4 +1,4 @@
-
+var Card = require('./Card').default;
 class CardList {
     constructor(container) {
         this.container = container;
@@ -18,3 +18,4 @@ class CardList {
     }
 }
 
+export default CardList

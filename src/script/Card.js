@@ -1,4 +1,4 @@
-
+var myId = require('./script').default;
 class Card {
     constructor(nameValue, linkValue, likeValue, cardId, ownerId, likesArr) {
         this.nameValue = nameValue;
@@ -98,3 +98,5 @@ class Card {
         event.target.classList.toggle('place-card__like-icon_liked');
     }
 }
+
+export default Card

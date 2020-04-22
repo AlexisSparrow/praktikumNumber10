@@ -29,4 +29,4 @@ class FormValidator {
 
 }
 
-module.exports = FormValidator
+export default FormValidator

@@ -1,3 +1,4 @@
+var FormValidator = require('./FormValidator').default;
 class FormValidatorEdit extends FormValidator {
     constructor(form,usernameForm,dutyForm) {
         super(form);
@@ -41,3 +42,5 @@ class FormValidatorEdit extends FormValidator {
     }
 
 }
+
+export default FormValidatorEdit

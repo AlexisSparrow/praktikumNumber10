@@ -1,5 +1,18 @@
 import "../index.css"
-var moduleFormValidator = require('./FormValidator');
+
+var Api = require('./Api').default;
+var PopupAdd = require('./PopupAdd').default;
+var PopupPhoto = require('./PopupPhoto').default;
+var PopupEdit = require('./PopupEdit').default;
+var PopupAvatar = require('./PopupAvatar').default;
+var UserInfo = require('./UserInfo').default;
+var FormValidatorEdit = require('./FormValidatorEdit').default;
+var FormValidatorAdd = require('./FormValidatorAdd').default;
+var FormValidatorAvatar = require('./FormValidatorAvatar').default;
+var CardList = require('./CardList').default;
+
+
+
 const root = document.querySelector('.root')
 const userName = document.querySelector('.user-info__name');
 const userJob = document.querySelector('.user-info__job');
@@ -12,6 +25,7 @@ const api = new Api({
         ContentType: 'application/json'
     }
 });
+
 
 const userInfo = new UserInfo(document.querySelector('.user-info__name'), document.querySelector('.user-info__job'));
 
@@ -59,3 +73,4 @@ api.getInitialCards()
     .catch(err => console.log(err));
 
 
+export default {userInfo,myId};

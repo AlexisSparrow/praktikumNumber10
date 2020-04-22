@@ -1,3 +1,4 @@
+var Popup = require('./Popup').default;
 class PopupPhoto extends Popup {
     constructor(element) {
         super(element);
@@ -11,3 +12,5 @@ class PopupPhoto extends Popup {
         popupImage.setAttribute('src', event.target.style.backgroundImage.slice(5, -2));
     }
 }
+
+export default PopupPhoto
