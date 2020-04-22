@@ -10,7 +10,7 @@
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -29,7 +29,7 @@
     </div>
     <div class="popup popup__type_add">
       <div class="popup__content">
-        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close__type_add">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close close__type_add">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="add" id="formAdd">
             <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" required minlength="2" required maxlength="30">
@@ -42,7 +42,7 @@
     </div>
     <div class="popup popup__type_edit">
       <div class="popup__content">
-        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close__type_edit">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close close__type_edit">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="edit" id="formEdit">
             <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" required minlength="2" required maxlength="30">
@@ -61,7 +61,7 @@
     </div>
     <div class="popup popup__type_avatar">
         <div class="popup__content">
-          <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close__type_avatar">
+          <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close close__type_avatar">
           <h3 class="popup__title">Обновить аватар</h3>
           <form class="popup__form" name="avatar" id="formAvatar">
               <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" required minlength="2" >

@@ -7,22 +7,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: [
-                    './src/script/Card.js',
-                    './src/script/CardList.js',
-                    './src/script/Popup.js',
-                    './src/script/PopupAdd.js',
-                    './src/script/PopupEdit.js',
-                    './src/script/PopupPhoto.js',
-                    './src/script/PopupAvatar.js',
-                    './src/script/UserInfo.js',
-                    './src/script/FormValidator.js',
-                    './src/script/FormValidatorAdd.js',
-                    './src/script/FormValidatorEdit.js',
-                    './src/script/FormValidatorAvatar.js',
-                    './src/script/Api.js',
-                    './src/script/script.js'
-                ] },
+  entry: { main: ['./src/script/script.js'] },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
@@ -50,9 +35,9 @@ module.exports = {
             loader: 'file-loader?name=./vendor/[name].[ext]'
         },
         {
-            test: /\.(png|jpg|gif|ico|svg)$/i,
+            test: /\.(png|jpе?g|gif|ico|svg)$/i,
             use: [
-                'file-loader?name=../dist/images/[name].[ext]',
+                'file-loader?name=./images/[name].[ext]',
                 {
                     loader: 'image-webpack-loader',
                     options: {
