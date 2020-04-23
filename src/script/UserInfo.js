@@ -1,4 +1,5 @@
-class UserInfo {
+import {api, userInfo, popupEdit} from './script'
+export default class UserInfo {
     constructor(username, userJob) {
         this.username = username;
         this.userJob = userJob
@@ -22,4 +23,3 @@ class UserInfo {
     }
 }
 
-export default UserInfo

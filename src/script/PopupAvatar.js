@@ -1,5 +1,6 @@
-var Popup = require('./Popup').default
-class PopupAvatar extends Popup {
+import Popup from './Popup'
+import {api,popupAvatar,userAvatar} from './script'
+export default class PopupAvatar extends Popup {
     constructor(element) {
         super(element)
         this.element
@@ -25,4 +26,3 @@ class PopupAvatar extends Popup {
     }
 }
 
-export default PopupAvatar

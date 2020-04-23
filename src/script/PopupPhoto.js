@@ -1,5 +1,5 @@
-var Popup = require('./Popup').default;
-class PopupPhoto extends Popup {
+import Popup from './Popup';
+export default class PopupPhoto extends Popup {
     constructor(element) {
         super(element);
         this.element
@@ -12,5 +12,3 @@ class PopupPhoto extends Popup {
         popupImage.setAttribute('src', event.target.style.backgroundImage.slice(5, -2));
     }
 }
-
-export default PopupPhoto

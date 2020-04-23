@@ -1,5 +1,6 @@
-var Popup = require('./Popup').default
-class PopupAdd extends Popup {
+import Popup from './Popup'
+import {api,popupAdd,cardList} from './script'
+export default class PopupAdd extends Popup {
     constructor(element,nameForm,linkForm) {
         super(element);
         this.nameForm = nameForm;
@@ -30,5 +31,3 @@ class PopupAdd extends Popup {
         formAdd.reset();
     };
 }
-
-export default PopupAdd

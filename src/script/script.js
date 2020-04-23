@@ -1,16 +1,14 @@
-import "../index.css"
 
-var Api = require('./Api').default;
-var PopupAdd = require('./PopupAdd').default;
-var PopupPhoto = require('./PopupPhoto').default;
-var PopupEdit = require('./PopupEdit').default;
-var PopupAvatar = require('./PopupAvatar').default;
-var UserInfo = require('./UserInfo').default;
-var FormValidatorEdit = require('./FormValidatorEdit').default;
-var FormValidatorAdd = require('./FormValidatorAdd').default;
-var FormValidatorAvatar = require('./FormValidatorAvatar').default;
-var CardList = require('./CardList').default;
-
+import Api from './Api';
+import PopupAdd from './PopupAdd'
+import PopupPhoto from './PopupPhoto'
+import PopupEdit from './PopupEdit'
+import PopupAvatar from './PopupAvatar'
+import UserInfo from './UserInfo';
+import FormValidatorEdit from './FormValidatorEdit'
+import FormValidatorAdd from './FormValidatorAdd'
+import FormValidatorAvatar from './FormValidatorAvatar'
+import CardList from './CardList'
 
 
 const root = document.querySelector('.root')
@@ -29,6 +27,7 @@ const api = new Api({
 
 const userInfo = new UserInfo(document.querySelector('.user-info__name'), document.querySelector('.user-info__job'));
 
+
 const formValidatorEdit = new FormValidatorEdit(document.forms.edit,formEdit.elements.name,formEdit.elements.job);
 
 const formValidatorAdd = new FormValidatorAdd(document.forms.add,formAdd.elements.name,formAdd.elements.link);
@@ -45,6 +44,9 @@ const popupEdit = new PopupEdit(document.querySelector('.popup__type_edit'));
 
 const popupAvatar = new PopupAvatar(document.querySelector('.popup__type_avatar'));
 
+
+export {userInfo,myId,api,popupEdit,popupAdd,cardList,popupAvatar,userAvatar};
+
 const valueOfEditChecker = () => { formEdit.elements.name.value = userName.textContent; formEdit.elements.job.value = userJob.textContent};
 
 const openPopupAdd = () => { if (event.target.classList.contains('user-info__button')) popupAdd.open(); };
@@ -58,6 +60,7 @@ const openPopupAvatar = () => { if (event.target.classList.contains('user-info__
 const openPopup = () => { openPopupAdd(); openPopupEdit(); openPopupImage(); openPopupAvatar(); };
 
 root.addEventListener('click', openPopup)
+
 
 api.getUserInfo()
     .then(data => {
@@ -73,4 +76,5 @@ api.getInitialCards()
     .catch(err => console.log(err));
 
 
-export default {userInfo,myId};
+
+

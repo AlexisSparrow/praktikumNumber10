@@ -56,7 +56,7 @@
     <div class="popup popup__type_photo">
       <div style="position: relative;">
         <img class="popup__img">
-        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close close__type_photo">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close close__type_photo">
       </div>
     </div>
     <div class="popup popup__type_avatar">
@@ -72,6 +72,6 @@
     </div>
   </div>
 
-  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>" ></script>
 </body>
 </html>

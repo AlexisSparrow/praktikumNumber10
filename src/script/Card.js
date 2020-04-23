@@ -1,5 +1,5 @@
-var myId = require('./script').default;
-class Card {
+import {myId, api} from './script'
+export default class Card {
     constructor(nameValue, linkValue, likeValue, cardId, ownerId, likesArr) {
         this.nameValue = nameValue;
         this.linkValue = linkValue;
@@ -98,5 +98,3 @@ class Card {
         event.target.classList.toggle('place-card__like-icon_liked');
     }
 }
-
-export default Card

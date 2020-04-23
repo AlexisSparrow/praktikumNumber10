@@ -1,4 +1,4 @@
-class Popup {
+export default class Popup {
     constructor(element) {
         this.element = element;
     }
@@ -12,4 +12,3 @@ class Popup {
     }
 }
 
-export default Popup

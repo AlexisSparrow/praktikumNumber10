@@ -1,5 +1,5 @@
-var FormValidator = require('./FormValidator').default;
-class FormValidatorAdd extends FormValidator {
+import FormValidator from './FormValidator'
+export default class FormValidatorAdd extends FormValidator {
     constructor(form,nameForm,linkForm) {
         super(form);
         this.nameForm = nameForm;
@@ -35,4 +35,3 @@ class FormValidatorAdd extends FormValidator {
     }
 }
 
-export default FormValidatorAdd
