@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Webpack</title>
-    <link rel="stylesheet" href="style.0b39673c143cdf250ebd.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="index.f83a2ffe33a992ce760e.css">
 </head>
 <body>
-    <h1>Hello</h1>
-    <script src="main.f6d8afdad9dcce911515.js"></script>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo">
+            <div class="user-info__opacity"></div>
+        </div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class = "button edit__button">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+    </div>
+    <div class="popup popup__type_add">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close close__type_add">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="add" id="formAdd">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" required minlength="2" required maxlength="30">
+            <p class = "popup__error" id = "errorName"></p>
+            <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" required minlength="2" >
+            <p class = "popup__error" id = "errorLink"></p>
+            <button type class="button popup__button button__type_add">+</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup__type_edit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close close__type_edit">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit" id="formEdit">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" required minlength="2" required maxlength="30">
+            <p class = "popup__error" id = "errorUsername"></p>
+            <input type="text" name="job" class="popup__input popup__input_type_link-url" placeholder="О себе" required minlength="2" required maxlength="30">
+            <p class = "popup__error" id = "errorJob"></p>
+            <button type class="button popup__button button__type_edit button__type_active">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup__type_photo">
+      <div style="position: relative;">
+        <img class="popup__img">
+        <img src="./images/close.svg" alt="" class="popup__close close__type_photo">
+      </div>
+    </div>
+    <div class="popup popup__type_avatar">
+        <div class="popup__content">
+          <img src="./images/close.svg" alt="" class="popup__close close__type_avatar">
+          <h3 class="popup__title">Обновить аватар</h3>
+          <form class="popup__form" name="avatar" id="formAvatar">
+              <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" required minlength="2" >
+              <p class = "popup__error" id = "errorLink"></p>
+              <button type class="button popup__button button__type_avatar">+</button>
+          </form>
+        </div>
+    </div>
+  </div>
+
+  <script src="main.9c90b9f2f349d6b6e5bf.js" type="module" ></script>
 </body>
+</html>
