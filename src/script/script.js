@@ -9,15 +9,15 @@ import FormValidatorEdit from './FormValidatorEdit'
 import FormValidatorAdd from './FormValidatorAdd'
 import FormValidatorAvatar from './FormValidatorAvatar'
 import CardList from './CardList'
-
-
+const isDev = process.env.NODE_ENV === 'development';
+const url = isDev ? 'https' : 'http';
 const root = document.querySelector('.root')
 const userName = document.querySelector('.user-info__name');
 const userJob = document.querySelector('.user-info__job');
 const myId = 'cc13f2e6e980cc31a0218ebe';
 const userAvatar = document.querySelector('.user-info__photo');
 const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort9',
+    baseUrl: `${url}://praktikum.tk/cohort9`,
     headers: {
         authorization: '3da3f1f7-00db-4edd-b225-5b13ee20d1ea',
         ContentType: 'application/json'

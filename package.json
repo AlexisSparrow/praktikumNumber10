@@ -1,7 +1,7 @@
 {
   "name": "praktikum",
   "homepage": "https://github.com/AlexisSparrow/praktikumNumber10",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This project allow you to post very interesting photos from visited places around the world",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "AlexisSparrow",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",

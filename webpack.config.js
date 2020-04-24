@@ -68,6 +68,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -77,3 +78,4 @@ module.exports = {
     new WebpackMd5Hash()
   ]
 };
+
