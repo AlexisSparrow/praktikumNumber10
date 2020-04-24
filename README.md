@@ -6,6 +6,6 @@
 4.??? 
 5.PROFIT! 
 #
-Ссылка на версию в github.io - 
+Ссылка на версию в github.io - https://alexissparrow.github.io/praktikumNumber10/
 #
 Актуальная версия - v1.0.2
