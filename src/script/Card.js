@@ -37,10 +37,7 @@ export default class Card {
         const deleteServerCard = () => {
             if (window.confirm('Вы действительно хотите удалить эту карточку?')) {
                 api.deleteCard(this.cardId)
-                    .then(data => {
-                        console.log(data);
-                        card.remove();
-                    })
+                    .then(card.remove())
                     .catch(err => console.log(err));
             }
         };
@@ -64,12 +61,10 @@ export default class Card {
             const likeDOM = card.querySelector('.place-card__like-icon');
             if (likeDOM.classList.contains('place-card__like-icon_liked')) {
                 api.likeAdd(this.cardId)
-                    .then(data => console.log(data))
                     .catch(err => console.log(err));
                 likeCounter.textContent = Number(likeCounter.textContent) + 1;
             } else {
                 api.likeDelete(this.cardId)
-                    .then(data => console.log(data))
                     .catch(err => console.log(err));
                 likeCounter.textContent = likeCounter.textContent - 1;
             };

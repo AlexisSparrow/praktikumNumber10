@@ -16,7 +16,6 @@ export default class PopupAvatar extends Popup {
         event.preventDefault();
         api.updateAvatar()
             .then(data => {
-                console.log(data);
                 userAvatar.style.backgroundImage = `url('${data.avatar}')`;
             })
             .catch(err => console.log(err));

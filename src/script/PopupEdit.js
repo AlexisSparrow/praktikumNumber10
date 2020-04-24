@@ -1,6 +1,5 @@
 import Popup from './Popup';
 import {userInfo} from './script'
-console.log(userInfo)
 export default class PopupEdit extends Popup {
     constructor(element) {
         super(element);

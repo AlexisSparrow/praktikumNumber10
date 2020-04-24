@@ -1,8 +1,8 @@
 {
   "name": "praktikum",
   "homepage": "https://github.com/AlexisSparrow/praktikumNumber10",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "This project allow you to post very interesting photos from visited places around the world",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",

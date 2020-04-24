@@ -15,7 +15,6 @@ export default class UserInfo {
         event.preventDefault();
         api.updateUserInfo()
             .then(data => {
-                console.log(data);
                 userInfo.setUserInfo(data.name,data.about);
                 popupEdit.close();
             })

@@ -23,7 +23,6 @@ export default class PopupAdd extends Popup {
         this.userData.link = this.linkForm.value;
         api.updateNewCard()
             .then(data => {
-                console.log(data);
                 cardList.addCard(data.name, data.link, data.likes.length, data._id, data.owner._id, data.likes);
             })
             .catch(err => console.log(err));
