@@ -9,8 +9,8 @@ import FormValidatorEdit from './FormValidatorEdit'
 import FormValidatorAdd from './FormValidatorAdd'
 import FormValidatorAvatar from './FormValidatorAvatar'
 import CardList from './CardList'
-const isDev = process.env.NODE_ENV === 'development';
-const url = isDev ? 'https' : 'http';
+const isDev = NODE_ENV === 'development';
+const url = isDev ? 'http' : 'https';
 const root = document.querySelector('.root')
 const userName = document.querySelector('.user-info__name');
 const userJob = document.querySelector('.user-info__job');

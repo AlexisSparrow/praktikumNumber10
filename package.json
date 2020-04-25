@@ -1,7 +1,7 @@
 {
   "name": "praktikum",
   "homepage": "https://github.com/AlexisSparrow/praktikumNumber10",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This project allow you to post very interesting photos from visited places around the world",
   "main": "index.js",
   "scripts": {
